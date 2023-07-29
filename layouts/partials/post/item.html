@@ -2,6 +2,18 @@
   <h2>
     <a href="{{.Permalink}}">{{ .Title }}</a>
   </h2>
+  <div class="taglist">
+    {{ partial "svg" (dict "iconName" "tag" "size" "14px")}}
+    <span>{{ partial "post/categoriesandtags.html" .}}</span>
+  </div>
+  <div class="reading-time">
+    {{ partial "svg" (dict "iconName" "clock" "size" "18px")}}
+    <span>{{ .ReadingTime }} {{ "minute" | pluralize }}</span>
+  </div>
+  <div class="published-date">
+    {{ partial "svg" (dict "iconName" "calendar" "size" "18px")}}
+    <span>{{ .PublishDate.Format "January 2, 2006" }}</span>
+  </div>
   <p>{{ .Summary }}</p>
   <div class="read-more">
     <a alt="{{.Title}}" href="{{.Permalink}}" />{{ partial "svg" (dict "iconName" "read" "size" "18px")}}
