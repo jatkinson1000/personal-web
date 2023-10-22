@@ -4,8 +4,8 @@
 {{ $style := slice $variables $scaffold $custom | resources.Concat "sass/style.sass" | toCSS | minify | fingerprint }}
 {{ $syntax := resources.Get "syntax.css" | minify }}
 
-<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" media="screen">
-<link rel="stylesheet" href="{{ $syntax.Permalink }}" integrity="{{ $syntax.Data.Integrity }}" media="screen">
+<link rel="stylesheet" href="{{ $style.Permalink }}" media="screen">
+<link rel="stylesheet" href="{{ $syntax.Permalink }}" media="screen">
 {{ if .Site.Params.assets.customCSS }}
   <link rel="stylesheet" href="{{ .Site.Params.assets.customCSS }}" media="screen">
 {{ end }}

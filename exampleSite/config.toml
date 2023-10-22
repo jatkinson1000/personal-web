@@ -49,18 +49,6 @@ pygmentsCodeFences=true
   favicon = ""
   customCSS = ""
 
-[params.social]
-  github = "https://github.com/"
-  twitter = "https://twitter.com/"
-  linkedin = "https://www.linkedin.com/in/"
-  medium = "https://medium.com/"
-  codepen = "https://codepen.io/"
-  facebook = "https://www.facebook.com/"
-  youtube = "https://www.youtube.com/"
-  instagram = "https://www.instagram.com/"
-  gitlab = "https://gitlab.com/"
-  keybase = "https://keybase.io/"
-
 [params.contact]
   email = ""
   text= "" # text of the contact link in the sidebar. If email params.contact.email is defined
@@ -88,6 +76,47 @@ pygmentsCodeFences=true
   title = "Blog section"
   url = "/post/"
   weight = -100
+
+[[menu.social]]
+  name = "github"
+  url = "https://github.com/"
+  weight = -100
+[[menu.social]]
+  name = "twitter"
+  url = "https://twitter.com/"
+  weight = -90
+[[menu.social]]
+  name = "linkedin"
+  url = "https://www.linkedin.com/in/"
+  weight = -80
+[[menu.social]]
+  name = "medium"
+  url = "https://medium.com/"
+  weight = -70
+[[menu.social]]
+  name = "codepen"
+  url = "https://codepen.io/"
+  weight = -60
+[[menu.social]]
+  name = "facebook"
+  url = "https://www.facebook.com/"
+  weight = -50
+[[menu.social]]
+  name = "youtube"
+  url = "https://www.youtube.com/"
+  weight = -40
+[[menu.social]]
+  name = "instagram"
+  url = "https://www.instagram.com/"
+  weight = -30
+[[menu.social]]
+  name = "gitlab"
+  url = "https://gitlab.com/"
+  weight = -20
+[[menu.social]]
+  name = "keybase"
+  url = "https://keybase.io/"
+  weight = -10
 
 [sitemap]
   changefreq = "monthly"

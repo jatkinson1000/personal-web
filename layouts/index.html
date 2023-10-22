@@ -8,6 +8,7 @@
 
 {{ .Content }}
 
+<!--
 <h2>{{ .Site.Params.main.latestPublishHeader | default "My Latest Job" }}</h2>
   {{ $pages := where site.RegularPages "Type" "in" .Site.Params.mainSections }}
   {{ range first 1 $pages }}
@@ -17,5 +18,6 @@
       {{ partial "post/item" .}}
     {{ end }}
   {{ end }}
+-->
 
 {{ partial "footer" .}}
