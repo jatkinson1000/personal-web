@@ -112,10 +112,6 @@ header
     border: 0
     max-width: $sidebar-width
 
-    .social-link a, a:visited, a:focus, a:active
-      svg
-        fill: white
-
     .social-link a:focus, a:active, a:hover
       svg
         +transition(fill 0.7s)
@@ -195,7 +191,6 @@ a, a:visited, a:link
   padding-bottom: 1px
   +transition(all 0.2s)
   svg
-    fill: inherit
     +transition(all 0.2s)
 
 a:hover, a:focus, a:active
@@ -204,8 +199,6 @@ a:hover, a:focus, a:active
   font-weight: 600
   border-bottom: $grey-600 1px dashed
   padding-bottom: 1px
-  svg
-    fill: $secondary-color
 
 .content-wrapper
   padding: $padding-content
