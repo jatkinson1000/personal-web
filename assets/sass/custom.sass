@@ -1,19 +1,30 @@
 // Import the Atkinson Hyperlegible Font
-$font-path: '/fonts/Atkinson_Next'
+$font-path: '/fonts/'
 
 // Mixin for importing
-=font-face($weight, $style, $file)
+=font-face-atkinson($weight, $style, $file)
   @font-face
     font-family: 'Atkinson Hyperlegible Next'
-    src: url("#{$font-path}/#{$file}.woff2") format('woff2')
+    src: url("#{$font-path}/Atkinson_Next/#{$file}.woff2") format('woff2')
     font-weight: $weight
     font-style: $style
     font-display: swap
 
 // Use the mixin to define fonts
-+font-face(400, normal, 'AtkinsonHyperlegibleNext-Regular')
-+font-face(700, normal, 'AtkinsonHyperlegibleNext-SemiBold')
-+font-face(400, italic, 'AtkinsonHyperlegibleNext-RegularItalic')
++font-face-atkinson(200, normal, 'AtkinsonHyperlegibleNext-ExtraLight')
++font-face-atkinson(300, normal, 'AtkinsonHyperlegibleNext-Light')
++font-face-atkinson(400, normal, 'AtkinsonHyperlegibleNext-Regular')
++font-face-atkinson(500, normal, 'AtkinsonHyperlegibleNext-Medium')
++font-face-atkinson(600, normal, 'AtkinsonHyperlegibleNext-SemiBold')
++font-face-atkinson(700, normal, 'AtkinsonHyperlegibleNext-Bold')
++font-face-atkinson(800, normal, 'AtkinsonHyperlegibleNext-ExtraBold')
++font-face-atkinson(200, italic, 'AtkinsonHyperlegibleNext-ExtraLightItalic')
++font-face-atkinson(300, italic, 'AtkinsonHyperlegibleNext-LightItalic')
++font-face-atkinson(400, italic, 'AtkinsonHyperlegibleNext-RegularItalic')
++font-face-atkinson(500, italic, 'AtkinsonHyperlegibleNext-MediumItalic')
++font-face-atkinson(600, italic, 'AtkinsonHyperlegibleNext-SemiBoldItalic')
++font-face-atkinson(700, italic, 'AtkinsonHyperlegibleNext-BoldItalic')
++font-face-atkinson(800, italic, 'AtkinsonHyperlegibleNext-ExtraBoldItalic')
 
 .small
   font-size: $font-size_small
