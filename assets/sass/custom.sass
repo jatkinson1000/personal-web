@@ -10,6 +10,14 @@ $font-path: '/fonts/'
     font-style: $style
     font-display: swap
 
+=font-face-maple($weight, $style, $file)
+  @font-face
+    font-family: 'Maple Mono'
+    src: url("#{$font-path}/Maple_Mono/#{$file}.ttf.woff2") format('woff2')
+    font-weight: $weight
+    font-style: $style
+    font-display: swap
+
 // Use the mixin to define fonts
 +font-face-atkinson(200, normal, 'AtkinsonHyperlegibleNext-ExtraLight')
 +font-face-atkinson(300, normal, 'AtkinsonHyperlegibleNext-Light')
@@ -25,6 +33,23 @@ $font-path: '/fonts/'
 +font-face-atkinson(600, italic, 'AtkinsonHyperlegibleNext-SemiBoldItalic')
 +font-face-atkinson(700, italic, 'AtkinsonHyperlegibleNext-BoldItalic')
 +font-face-atkinson(800, italic, 'AtkinsonHyperlegibleNext-ExtraBoldItalic')
+
++font-face-maple(100, normal, 'MapleMonoNormal-Thin')
++font-face-maple(200, normal, 'MapleMonoNormal-ExtraLight')
++font-face-maple(300, normal, 'MapleMonoNormal-Light')
++font-face-maple(400, normal, 'MapleMonoNormal-Regular')
++font-face-maple(500, normal, 'MapleMonoNormal-Medium')
++font-face-maple(600, normal, 'MapleMonoNormal-SemiBold')
++font-face-maple(700, normal, 'MapleMonoNormal-Bold')
++font-face-maple(800, normal, 'MapleMonoNormal-ExtraBold')
++font-face-maple(100, italic, 'MapleMonoNormal-ThinItalic')
++font-face-maple(200, italic, 'MapleMonoNormal-ExtraLightItalic')
++font-face-maple(300, italic, 'MapleMonoNormal-LightItalic')
++font-face-maple(400, italic, 'MapleMonoNormal-Italic')
++font-face-maple(500, italic, 'MapleMonoNormal-MediumItalic')
++font-face-maple(600, italic, 'MapleMonoNormal-SemiBoldItalic')
++font-face-maple(700, italic, 'MapleMonoNormal-BoldItalic')
++font-face-maple(800, italic, 'MapleMonoNormal-ExtraBoldItalic')
 
 .small
   font-size: $font-size_small
