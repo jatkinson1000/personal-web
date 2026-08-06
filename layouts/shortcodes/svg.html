@@ -1,10 +1,4 @@
 {{ $icon_name := .Get "icon_name" }}
-{{ $size := .Get "icon_size" }}
-
-{{ if .Get "icon_size" }}
-    {{ $size := .Get "icon_size" }}
-{{ else }}
-    {{ $size := "1em"}}
-{{ end }}
+{{ $size := .Get "icon_size" | default "1em" }}
 
 {{ partial "svg" (dict "iconName" $icon_name "size" $size ) }}
