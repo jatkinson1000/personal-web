@@ -9,21 +9,28 @@
   {{ template "_internal/google_analytics.html" . }}
 
   <script type="text/javascript">
-    document.querySelector('.mobile-header').addEventListener('click', function () {
-      var om = document.querySelector(".overlay-menu");
-      if (document.querySelector('.hamburger').classList.contains("cross")) {
-        document.querySelector('.hamburger').classList.remove("cross");
-        om.style.display = "none";
-        om.style.width = "0%";
-        om.style.height = "0%";
-      }
-      else {
-        document.querySelector('.hamburger').classList.add("cross");
-        om.style.width = "100%";
-        om.style.height = "100vh";
-        om.style.display = "block";
-      }
-    });
+    var mobileHeader = document.querySelector('.mobile-header');
+    if (mobileHeader) {
+      mobileHeader.addEventListener('click', function () {
+        var om = document.querySelector(".overlay-menu");
+        var hamburger = document.querySelector('.hamburger');
+        var isOpen = hamburger.classList.contains("cross");
+        if (isOpen) {
+          hamburger.classList.remove("cross");
+          hamburger.setAttribute("aria-expanded", "false");
+          om.style.display = "none";
+          om.style.width = "0%";
+          om.style.height = "0%";
+        }
+        else {
+          hamburger.classList.add("cross");
+          hamburger.setAttribute("aria-expanded", "true");
+          om.style.width = "100%";
+          om.style.height = "100vh";
+          om.style.display = "block";
+        }
+      });
+    }
   </script>
   {{ if $.Site.Params.copyCodeButtonEnabled }}
     {{ if (findRE "<pre" .Content 1) }}
