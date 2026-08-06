@@ -3,7 +3,7 @@
     {{ partial "svg" (dict "iconName" "pencil" "size" "18px")}}
     {{ range $i, $e := .Params.designs }}
       <span>
-        {{- with $.Site.GetPage "taxonomyTerm" (printf "designs/%s" ( urlize .)) -}}
+        {{- with $.Site.GetPage "term" (printf "designs/%s" ( urlize .)) -}}
           {{- if $i -}}<span>- </span>{{ end }}
           <a href="{{ .Permalink }}">{{ .Title }}</a>
         {{ end }}
@@ -17,7 +17,7 @@
     {{ partial "svg" (dict "iconName" "tech" "size" "18px")}}
     <span>
       {{ range $i, $e := .Params.techs }}
-        {{- with $.Site.GetPage "taxonomyTerm" (printf "techs/%s" ( urlize .)) -}}
+        {{- with $.Site.GetPage "term" (printf "techs/%s" ( urlize .)) -}}
           {{- if $i -}}<span>- </span>{{ end }}
           <a href="{{ .Permalink }}">{{ .Title }}</a>
         {{ end }}
