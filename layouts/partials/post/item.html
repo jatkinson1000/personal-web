@@ -16,7 +16,7 @@
   </div>
   <p>{{ .Summary }}</p>
   <div class="read-more">
-    <a alt="{{.Title}}" href="{{.Permalink}}" />{{ partial "svg" (dict "iconName" "read" "size" "18px")}}
+    <a href="{{.Permalink}}" aria-label="Read more: {{ .Title }}">{{ partial "svg" (dict "iconName" "read" "size" "18px")}}
     Read more</a>
   </div>
 </div>
