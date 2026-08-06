@@ -1,5 +1,5 @@
 {{ range .Site.Menus.social }}
   {{ if .URL }}
-    <a href="{{ .URL }}" class="social-link" target="_blank" rel="noopener" >{{- partial "svg" (dict "iconName" .Name "size" "35px") -}}</a>
+    <a href="{{ .URL }}" class="social-link" target="_blank" rel="noopener" aria-label="{{ .Name }}">{{- partial "svg" (dict "iconName" .Name "size" "35px") -}}</a>
   {{end}}
 {{ end }}
