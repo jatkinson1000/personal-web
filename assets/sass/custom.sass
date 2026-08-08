@@ -18,6 +18,14 @@ $font-path: '/fonts/'
     font-style: $style
     font-display: swap
 
+=font-face-pokemon($weight, $style, $file)
+  @font-face
+    font-family: 'Pokemon GB'
+    src: url("#{$font-path}/Pokemon_GB/#{$file}.ttf") format('truetype')
+    font-weight: $weight
+    font-style: $style
+    font-display: swap
+
 // Use the mixin to define fonts
 +font-face-atkinson(200, normal, 'AtkinsonHyperlegibleNext-ExtraLight')
 +font-face-atkinson(300, normal, 'AtkinsonHyperlegibleNext-Light')
@@ -50,6 +58,8 @@ $font-path: '/fonts/'
 +font-face-maple(600, italic, 'MapleMonoNormal-SemiBoldItalic')
 +font-face-maple(700, italic, 'MapleMonoNormal-BoldItalic')
 +font-face-maple(800, italic, 'MapleMonoNormal-ExtraBoldItalic')
+
++font-face-pokemon(400, normal, 'PokemonGb-RAeo')
 
 .small
   font-size: $font-size_small
@@ -241,6 +251,7 @@ header
 .chroma
   padding: 10px
   margin-bottom: 15px
+  overflow-x: auto
 
 .skip-link
   position: absolute
