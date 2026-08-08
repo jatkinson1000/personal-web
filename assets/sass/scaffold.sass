@@ -22,9 +22,14 @@ code
   font-family: $font-family_code;
   font-size: 0.75em;
 
-p code
+// Inline code: light grey background to distinguish from body text.
+// Reset for code inside pre blocks (handled by Chroma syntax highlighting).
+code
   background-color: $grey-300
   padding: 0px 5px
+pre code
+  background-color: transparent
+  padding: 0
 
 ul
   margin-top: -$margin-blocks/2
