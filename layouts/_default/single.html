@@ -1,4 +1,4 @@
-{{ partial "header" .}}
+{{ define "main" }}
 
 {{ if .Site.Params.rendererSafe }}
   <h1>{{ .Title }}</h1>
@@ -8,4 +8,4 @@
   {{ .Content | markdownify }}
 {{ end}}
 
-{{ partial "footer" .}}
+{{ end }}

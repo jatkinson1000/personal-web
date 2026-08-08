@@ -1,4 +1,4 @@
-{{ partial "header" .}}
+{{ define "main" }}
 
   <h1 id="title"> {{ .Title }}</h1>
   <p>{{ .Content }}</p>
@@ -10,4 +10,4 @@
     </ul>
   {{ end }}
 
-{{ partial "footer" .}}
+{{ end }}
