@@ -57,4 +57,4 @@ Did you found a bug or got an idea for a new feature? Feel free to use the [issu
 
 ## License
 
-This theme is released under the Unlincense License. For more information read the [License](https://github.com/bjacquemet/personal-web/blob/master/LICENSE).
+This theme is released under the MIT License. For more information read the [License](https://github.com/jatkinson1000/personal-web/blob/master/LICENSE).
